@@ -1,0 +1,4 @@
+I love data
+Data mining is great
+foo
+bar
