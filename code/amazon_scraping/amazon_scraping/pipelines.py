@@ -55,17 +55,11 @@ class AmazonPipeline:
 
 		# TODO (5) Create an exporter for the key, if needed
 		# Check if the key doesn't exist in the dictionary
-
 		#	TODO (5.1) Open a CSV file to create a new exporter
-
 		#	TODO (5.2) Construct the header row from self.fields
-
 		#	TODO (5.3) Configure the fields_to_export
-
 		#	TODO (5.4) Call the start_exporting function
-
 		#	TODO (5.5) Export the header row
-
 		#	TODO (5.6) Add exporter to the dictionary
 
 		# TODO (6) Return the corresponding exporter
@@ -79,9 +73,7 @@ class AmazonPipeline:
 	):
 		# TODO (7) Export matching items
 		# Check if the item is an instance of self.item_type
-
 		#	TODO (7.1) Get the exporter for this item
-
 		#	TODO (7.2) Export the item
 
 		# It's required to return the item after it
