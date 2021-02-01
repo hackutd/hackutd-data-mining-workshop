@@ -8,11 +8,17 @@
 from scrapy import Item, Field
 
 
-# TODO (2.1) Define ProductItem class attributes
+# Define ProductItem class attributes
 class ProductItem(Item):
-	pass
+	asin = Field()
+	price = Field()
+	avg_stars = Field()
+	name = Field()
+	keyword = Field()
 
 
-# TODO (2.2) Define ReviewItem class attributes
+# Define ReviewItem class attributes
 class ReviewItem(Item):
-	pass
+	stars = Field()
+	description = Field()
+	asin = Field()
