@@ -39,32 +39,33 @@ RETRY_TIMES = 5
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
-# TODO (1) Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = json.load(open('headers.json'))
+# Override the default request headers
+DEFAULT_REQUEST_HEADERS = json.load(open('headers.json'))
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'amazon_scraping.middlewares.AmazonScrapingSpiderMiddleware': 543,
-#}
+# SPIDER_MIDDLEWARES = {
+# 	'amazon_scraping.middlewares.AmazonScrapingSpiderMiddleware': 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'amazon_scraping.middlewares.AmazonScrapingDownloaderMiddleware': 543,
-#}
+# DOWNLOADER_MIDDLEWARES = {
+# 	'amazon_scraping.middlewares.AmazonScrapingDownloaderMiddleware': 543,
+# }
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
-
-# TODO (9) Configure item pipelines (assign a value between 0-1000)
-# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'amazon_scraping.pipelines.AmazonPipeline': 0,
+# EXTENSIONS = {
+#     'scrapy.extensions.telnet.TelnetConsole': None,
 # }
+
+# Configure item pipelines (assign a value between 0-1000)
+# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+ITEM_PIPELINES = {
+	'amazon_scraping.pipelines.ProductPipeline': 1,
+	'amazon_scraping.pipelines.ReviewPipeline': 2,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
